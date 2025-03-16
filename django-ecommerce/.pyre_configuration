@@ -1,0 +1,8 @@
+{
+  "site_package_search_strategy": "pep561",
+  "source_directories": [
+    "."
+  ],
+  "taint_models_path": "/home/annie/.venvs/pysa/lib/pyre_check/taint",
+  "typeshed": "/home/annie/.venvs/pysa/lib/pyre_check/typeshed"
+}

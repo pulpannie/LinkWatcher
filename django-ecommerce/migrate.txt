@@ -1,0 +1,72 @@
+CREATING MODEL LogEntry
+CREATING MODEL Permission
+CREATING MODEL Group
+CREATING MODEL User
+CREATING MODEL ContentType
+CREATING MODEL Session
+CREATING MODEL Site
+CREATING MODEL EmailAddress
+CREATING MODEL EmailConfirmation
+CREATING MODEL SocialAccount
+CREATING MODEL SocialApp
+CREATING MODEL SocialToken
+CREATING MODEL UserProfile
+CREATING MODEL Address
+CREATING MODEL Coupon
+CREATING MODEL Item
+CREATING MODEL Order
+CREATING MODEL Refund
+CREATING MODEL Payment
+CREATING MODEL OrderItem
+Operations to perform:
+  Apply all migrations: account, admin, auth, contenttypes, core, sessions, sites, socialaccount
+Running migrations:
+  Applying contenttypes.0001_initial...model.name before:  <class 'django.db.models.base.ModelBase'>
+ OK
+  Applying auth.0001_initial...model.name before:  <class 'django.db.models.base.ModelBase'>
+model.name before:  <class 'django.db.models.base.ModelBase'>
+model.name before:  <class 'django.db.models.base.ModelBase'>
+ OK
+  Applying account.0001_initial...model.name before:  <class 'django.db.models.base.ModelBase'>
+model.name before:  <class 'django.db.models.base.ModelBase'>
+ OK
+  Applying account.0002_email_max_length... OK
+  Applying admin.0001_initial...model.name before:  <class 'django.db.models.base.ModelBase'>
+ OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying core.0001_initial...model.name before:  <class 'django.db.models.base.ModelBase'>
+model.name before:  <class 'django.db.models.base.ModelBase'>
+model.name before:  <class 'django.db.models.base.ModelBase'>
+model.name before:  <class 'django.db.models.base.ModelBase'>
+model.name before:  <class 'django.db.models.base.ModelBase'>
+model.name before:  <class 'django.db.models.base.ModelBase'>
+model.name before:  <class 'django.db.models.base.ModelBase'>
+ OK
+  Applying core.0002_auto_20190616_2144... OK
+  Applying core.0003_userprofile...model.name before:  <class 'django.db.models.base.ModelBase'>
+ OK
+  Applying core.0004_auto_20190630_1408... OK
+  Applying core.0005_item_test... OK
+  Applying sessions.0001_initial...model.name before:  <class 'django.db.models.base.ModelBase'>
+ OK
+  Applying sites.0001_initial...model.name before:  <class 'django.db.models.base.ModelBase'>
+ OK
+  Applying sites.0002_alter_domain_unique... OK
+  Applying socialaccount.0001_initial...model.name before:  <class 'django.db.models.base.ModelBase'>
+model.name before:  <class 'django.db.models.base.ModelBase'>
+model.name before:  <class 'django.db.models.base.ModelBase'>
+ OK
+  Applying socialaccount.0002_token_max_lengths... OK
+  Applying socialaccount.0003_extra_data_default_dict... OK

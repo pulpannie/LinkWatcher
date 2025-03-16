@@ -1,0 +1,63 @@
+=========SENDING DELETE REQUEST===========
+sql statement:  SELECT "rowid", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."email" = %s ('hyokyung@gmail.com',) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."email" = hyokyung@gmail.com
+result:  (210, 210, 'pbkdf2_sha256$150000$JCr0bs2oKonS$XxM3tpc6ANpISWzdippwv0NpcTyM/b7GXr6SxCOcBno=', None, False, 'annie', '', '', 'hyokyung@gmail.com', False, True, datetime.datetime(2024, 4, 23, 8, 14, 22, 678361)) AutoField
+sql statement:  SELECT "rowid", "account_emailaddress"."id", "account_emailaddress"."user_id", "account_emailaddress"."email", "account_emailaddress"."verified", "account_emailaddress"."primary" FROM "account_emailaddress" WHERE "account_emailaddress"."user_id" IN (%s) (210,) SELECT "account_emailaddress"."id", "account_emailaddress"."user_id", "account_emailaddress"."email", "account_emailaddress"."verified", "account_emailaddress"."primary" FROM "account_emailaddress" WHERE "account_emailaddress"."user_id" IN (210)
+result:  []
+sql statement:  SELECT "rowid", "socialaccount_socialaccount"."id", "socialaccount_socialaccount"."user_id", "socialaccount_socialaccount"."provider", "socialaccount_socialaccount"."uid", "socialaccount_socialaccount"."last_login", "socialaccount_socialaccount"."date_joined", "socialaccount_socialaccount"."extra_data" FROM "socialaccount_socialaccount" WHERE "socialaccount_socialaccount"."user_id" IN (%s) (210,) SELECT "socialaccount_socialaccount"."id", "socialaccount_socialaccount"."user_id", "socialaccount_socialaccount"."provider", "socialaccount_socialaccount"."uid", "socialaccount_socialaccount"."last_login", "socialaccount_socialaccount"."date_joined", "socialaccount_socialaccount"."extra_data" FROM "socialaccount_socialaccount" WHERE "socialaccount_socialaccount"."user_id" IN (210)
+result:  []
+sql statement:  SELECT "rowid", "core_payment"."id", "core_payment"."stripe_charge_id", "core_payment"."user_id", "core_payment"."amount", "core_payment"."timestamp" FROM "core_payment" WHERE "core_payment"."user_id" IN (%s) (210,) SELECT "core_payment"."id", "core_payment"."stripe_charge_id", "core_payment"."user_id", "core_payment"."amount", "core_payment"."timestamp" FROM "core_payment" WHERE "core_payment"."user_id" IN (210)
+result:  []
+sql statement:  DELETE FROM "django_admin_log" WHERE "django_admin_log"."user_id" IN (%s) (210,) DELETE FROM "django_admin_log" WHERE "django_admin_log"."user_id" IN (210)
+sql statement:  DELETE FROM "auth_user_groups" WHERE "auth_user_groups"."user_id" IN (%s) (210,) DELETE FROM "auth_user_groups" WHERE "auth_user_groups"."user_id" IN (210)
+sql statement:  DELETE FROM "auth_user_user_permissions" WHERE "auth_user_user_permissions"."user_id" IN (%s) (210,) DELETE FROM "auth_user_user_permissions" WHERE "auth_user_user_permissions"."user_id" IN (210)
+sql statement:  DELETE FROM "core_userprofile" WHERE "core_userprofile"."user_id" IN (%s) (210,) DELETE FROM "core_userprofile" WHERE "core_userprofile"."user_id" IN (210)
+sql statement:  DELETE FROM "core_address" WHERE "core_address"."user_id" IN (%s) (210,) DELETE FROM "core_address" WHERE "core_address"."user_id" IN (210)
+sql statement:  DELETE FROM "auth_user" WHERE "auth_user"."id" IN (%s) (210,) DELETE FROM "auth_user" WHERE "auth_user"."id" IN (210)
+=======
+RESPONSE:
+=======
+302
+b'{"data": {"self.request.POST.email": "hyokyung@gmail.com", "self.request.POST.t_email": "PII"}, "hashes": {}, "tags": {"self.request.POST.email": "PII"}}'
+=========SENDING REGISTER REQUEST==========
+sql statement:  SELECT "rowid", (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = %s  LIMIT 1 ('annie',) SELECT (1) AS "a" FROM "auth_user" WHERE "auth_user"."username" = annie  LIMIT 1
+=======
+RESPONSE:
+=======
+TEST RESPONSE: 302
+TEST RESPONSE: b'{"data": {"self.request.POST.username": "annie", "self.request.POST.email": "hyokyung@gmail.com", "self.request.POST.password1": "password", "self.request.POST.password2": "password", "self.request.POST.t_email": "PII"}, "hashes": {"self.request.POST.username": ["auth_user.username.391"], "self.request.POST.email": ["auth_user.email.391"], "self.request.POST.password1": ["auth_user.password.391"]}, "tags": {"self.request.POST.username": "Linked", "self.request.POST.email": "PII", "self.request.POST.password1": "Linked", "self.request.POST.password2": ""}}'
+=========SENDING LOGIN REQUEST=============
+sql statement:  SELECT "rowid", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = %s ('annie',) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = annie
+result:  (391, 391, 'pbkdf2_sha256$150000$Qbtw1z2hLNJI$KMbfDMUXga3A0C0T4fvBlxpfc38Wc+nMaEvVnwgBxBk=', None, False, 'annie', '', '', 'hyokyung@gmail.com', False, True, datetime.datetime(2024, 4, 26, 4, 3, 2, 525044)) AutoField
+=======
+RESPONSE:
+=======
+TEST RESPONSE: 302
+TEST RESPONSE: b'{"data": {"self.request.POST.username": "annie", "self.request.POST.password": "password", "self.request.POST.t_username": "Linked", "self.request.POST.t_password": "Linked", "self.request.POST.h_username": "auth_user.username.391", "self.request.POST.h_password": "auth_user.password.391"}, "hashes": {"self.request.POST.username": ["auth_user.username.391"], "self.request.POST.password": ["auth_user.password.391"]}, "tags": {"self.request.POST.username": "Linked", "self.request.POST.password": "Linked"}}'
+=========SENDING ORDER REQUEST=============
+sql statement:  SELECT "rowid", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = %s ('annie',) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = annie
+result:  (391, 391, 'pbkdf2_sha256$150000$Qbtw1z2hLNJI$KMbfDMUXga3A0C0T4fvBlxpfc38Wc+nMaEvVnwgBxBk=', None, False, 'annie', '', '', 'hyokyung@gmail.com', False, True, datetime.datetime(2024, 4, 26, 4, 3, 2, 525044)) AutoField
+sql statement:  SELECT "rowid", "core_item"."id", "core_item"."title", "core_item"."price", "core_item"."discount_price", "core_item"."slug" FROM "core_item" WHERE "core_item"."slug" = %s (1,) SELECT "core_item"."id", "core_item"."title", "core_item"."price", "core_item"."discount_price", "core_item"."slug" FROM "core_item" WHERE "core_item"."slug" = 1
+result:  (1, 1, 'book', 33.0, None, 1) AutoField
+sql statement:  SELECT "rowid", "core_orderitem"."id", "core_orderitem"."user_id", "core_orderitem"."ordered", "core_orderitem"."item_id", "core_orderitem"."quantity", "core_orderitem"."ordered_date" FROM "core_orderitem" WHERE ("core_orderitem"."item_id" = %s AND "core_orderitem"."ordered" = %s AND "core_orderitem"."ordered_date" = %s AND "core_orderitem"."user_id" = %s) (1, True, '2024-04-26 04:03:03.252770', 391) 
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+SELECT "core_orderitem"."id", "core_orderitem"."user_id", "core_orderitem"."ordered", "core_orderitem"."item_id", "core_orderitem"."quantity", "core_orderitem"."ordered_date" FROM "core_orderitem" WHERE ("core_orderitem"."item_id" = 1 AND "core_orderitem"."ordered" = True AND "core_orderitem"."ordered_date" = 2024-04-26 04:03:03.252770 AND "core_orderitem"."user_id" = 391)
+result:  []
+=======
+RESPONSE:
+=======
+ORDER RESPONSE: 302 b'{"data": {"self.request.POST.username": "annie", "self.request.POST.slug": "1", "self.request.POST.t_username": "Linked", "self.request.POST.t_password": "Linked", "self.request.POST.h_username": "auth_user.username.391"}, "hashes": {"self.request.POST.username": ["auth_user.username.391"]}, "tags": {"self.request.POST.username": "Linked", "self.request.POST.slug": ""}}'
+=========SENDING REVIEW REQUEST===========
+sql statement:  SELECT "rowid", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = %s ('annie',) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = annie
+result:  (391, 391, 'pbkdf2_sha256$150000$Qbtw1z2hLNJI$KMbfDMUXga3A0C0T4fvBlxpfc38Wc+nMaEvVnwgBxBk=', None, False, 'annie', '', '', 'hyokyung@gmail.com', False, True, datetime.datetime(2024, 4, 26, 4, 3, 2, 525044)) AutoField
+sql statement:  SELECT "rowid", "core_item"."id", "core_item"."title", "core_item"."price", "core_item"."discount_price", "core_item"."slug" FROM "core_item" WHERE "core_item"."slug" = %s (1,) SELECT "core_item"."id", "core_item"."title", "core_item"."price", "core_item"."discount_price", "core_item"."slug" FROM "core_item" WHERE "core_item"."slug" = 1
+result:  (1, 1, 'book', 33.0, None, 1) AutoField
+sql statement:  SELECT "rowid", "core_orderitem"."id", "core_orderitem"."user_id", "core_orderitem"."ordered", "core_orderitem"."item_id", "core_orderitem"."quantity", "core_orderitem"."ordered_date" FROM "core_orderitem" WHERE ("core_orderitem"."item_id" = %s AND "core_orderitem"."user_id" = %s) (1, 391) SELECT "core_orderitem"."id", "core_orderitem"."user_id", "core_orderitem"."ordered", "core_orderitem"."item_id", "core_orderitem"."quantity", "core_orderitem"."ordered_date" FROM "core_orderitem" WHERE ("core_orderitem"."item_id" = 1 AND "core_orderitem"."user_id" = 391)
+result:  (656, 656, 391, True, 1, 1, datetime.datetime(2024, 4, 26, 4, 3, 3, 252770)) AutoField
+=======
+RESPONSE:
+=======
+REVIEW RESPONSE: 302 b'{"data": {"self.request.POST.username": "annie", "self.request.POST.slug": "1", "self.request.POST.title": "This sucks", "self.request.POST.body": "Why did you make this product.", "self.request.POST.t_username": "Linked", "self.request.POST.h_username": "auth_user.username.391"}, "hashes": {"self.request.POST.username": ["auth_user.username.391"], "self.request.POST.title": ["core_review.title.28"], "self.request.POST.body": ["core_review.body.28"]}, "tags": {"self.request.POST.username": "Linked", "self.request.POST.slug": "", "self.request.POST.title": "Linked", "self.request.POST.body": "Linked"}}'
+System check identified no issues (0 silenced).

@@ -1,0 +1,34 @@
+# HttpRequest sources
+
+# def django.views.generic.View.setup(
+#      self,
+#      request: TaintSource[UserControlled1],
+#      *args,
+#      **kwargs): ...
+
+def core.views.CheckoutView.post(
+      self: TaintSource[UserControlled1],
+      *args,
+      **kwargs
+): ...
+
+django.http.request.HttpRequest.GET: TaintSource[UserControlled1] = ...
+
+# HttpResponse sinks
+
+def django.http.response.HttpResponse.__init__(
+self,
+content,
+*args,
+*,
+content_type: TaintSink[ReturnedToUser1],
+**kwargs,
+): ...
+
+def django.http.response.HttpResponse.__init__(
+self,
+content: TaintSink[ReturnedToUser1],
+*args: TaintSink[ReturnedToUser1],
+**kwargs: TaintSink[ReturnedToUser1],
+): ...
+
