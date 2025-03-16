@@ -1,0 +1,30 @@
+Note: Unnecessary use of -X or --request, POST is already inferred.
+*   Trying 127.0.0.1:8000...
+* TCP_NODELAY set
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Connected to 127.0.0.1 (127.0.0.1) port 8000 (#0)
+> POST /login/ HTTP/1.1
+> Host: 127.0.0.1:8000
+> User-Agent: curl/7.68.0
+> Accept: */*
+> Content-Length: 253
+> Content-Type: multipart/form-data; boundary=------------------------6f67c593dd8bf8c4
+> 
+} [253 bytes data]
+* We are completely uploaded and fine
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Date: Fri, 22 Mar 2024 09:41:21 GMT
+< Server: WSGIServer/0.2 CPython/3.8.10
+< Content-Type: application/json
+< X-Frame-Options: SAMEORIGIN
+< Content-Length: 147
+< Vary: Cookie
+< Set-Cookie:  sessionid=3ix8qz1nlsznfjoulub6hhvlyaqmak6n; expires=Fri, 05 Apr 2024 09:41:21 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax
+< 
+{ [300 bytes data]
+* Excess found in a read: excess = 153, size = 147, maxdownload = 147, bytecount = 0
+100   400  100   147  100   253   1373   2364 --:--:-- --:--:-- --:--:--  3738
+* Connection #0 to host 127.0.0.1 left intact
+{"data": {"self.request.POST": {"username": "annie", "password": "password"}, "self.request.session['_auth_user_id']": "294", "username": "annie"},
