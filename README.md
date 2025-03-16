@@ -1,6 +1,6 @@
 This is the repository for **LinkWatcher**, a system that categorizes the anonymity of data in a web service's database, without dependence on the untrusted developer.
 
-You can access the paper [here](https://dcollection.snu.ac.kr/public_resource/pdf/000000184244_20250317005716.pdf)
+You can access the paper [here](https://dcollection.snu.ac.kr/common/orgView/000000184244)
 
 ## Problem Scenario
 <img width="500" alt="Screenshot 2025-03-17 at 1 17 38 AM" src="https://github.com/user-attachments/assets/97abc78e-0e23-4165-9e6e-aa25386608c9" />
