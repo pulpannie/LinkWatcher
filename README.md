@@ -26,7 +26,19 @@ In the runtime phase, the user sends her **data**, along with a **tag** that ind
 The LinkWatcher middleware interposes between the application and any I/O to the user and the database.
 When the application writes to the database, LinkWatcher dynamically analyses the sensitivity of data being written, based on tag, token, and summary of links.
 By doing so LinkWatcher can automatically categorize whether a single piece of data in the application database is anonymous or identifiable, without relying on the malicious developer.
+LinkWatcher stores these analysis results in a Linkage database, and returns it to the user.
 
+## How is the LinkWatcher static analyzer different from other analyzers?
+
+The LinkWatcher static analyzer modifies [pyt](https://github.com/python-security/pyt) to track dataflow that harms anonymity by:
+1. Implementing field senstiive data analysis
+2. Multi-source, multi-sink analysis (as there can be multiple database reads and writes in a single user request)
+3. Incorporating both forward & backward analysis
+    - to effectively identify *Links* formed by dataflow in code
+    - *Links* are formed when:
+        - user data (source) flows to a sink
+        - user data and *any* variable (including constant variables) act as operands together in a variable assignment.
+        - such *any* variable flows to a sink.
 
 ## Implementation
 - Static Analyzer: modified version of pyt
