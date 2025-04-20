@@ -3,20 +3,20 @@ This is the repository for **LinkWatcher**, a system that categorizes the anonym
 You can access the paper [here](https://dcollection.snu.ac.kr/common/orgView/000000184244)
 
 ## Problem Scenario
-<img width="500" alt="Screenshot 2025-03-17 at 1 17 38 AM" src="https://github.com/user-attachments/assets/97abc78e-0e23-4165-9e6e-aa25386608c9" />
+<img width="500" alt="Problem Scenario" src="https://github.com/user-attachments/assets/97abc78e-0e23-4165-9e6e-aa25386608c9" />
 
 Suppose a user sends her personal data to an application, e-shop. Some of her data is more sensitive than others (ex. email vs age).
 Her data is processed then stored in the application database.
 How do we know the sensitivity of each data output to the application database? In other words, how do we know which of the user's input data flowed into which output data?
 Only the developer really knows!
 
-<img width="500" alt="Screenshot 2025-03-17 at 1 16 27 AM" src="https://github.com/user-attachments/assets/4f1d7a76-8a8c-4aea-893b-51eaf3aa76f1" />
+<img width="500" alt="LinkWatcher background" src="https://github.com/user-attachments/assets/4f1d7a76-8a8c-4aea-893b-51eaf3aa76f1" />
 
 This is a problem because privacy laws rely on the categorization of data: *is the data anonymous? or not?*
 The auditor has no choice but to rely on the developer's categorization.
 
 ## LinkWatcher design
-<img width="500" alt="Screenshot 2025-03-17 at 1 22 53 AM" src="https://github.com/user-attachments/assets/91443a60-fcf8-41af-a468-1b408b0dc7f3" />
+<img width="500" alt="LinkWatcher design" src="https://github.com/user-attachments/assets/91443a60-fcf8-41af-a468-1b408b0dc7f3" />
 
 LinkWatcher solves this problem with a system comprising two phases.
 
